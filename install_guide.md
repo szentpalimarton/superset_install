@@ -28,7 +28,25 @@ cd /app
 mkdir superset
 cd superset
 sudo apt install python3-venv
+
+sudo apt update
+sudo apt install -y wget build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev curl libbz2-dev
+
+# Download and extract Python 3.10.14
+wget https://www.python.org/ftp/python/3.10.14/Python-3.10.14.tgz
+tar -xf Python-3.10.14.tgz
+cd Python-3.10.14
+
+# Build and install Python 3.10.14
+./configure --enable-optimizations
+make -j $(nproc)
+sudo make altinstall
 python3 -m venv superset_env
+
+wget https://www.python.org/ftp/python/3.10.14/Python-3.10.14.tgz
+tar -xf Python-3.10.14.tgz
+
+
 . superset_env/bin/activate
 pip install --upgrade setuptools pip
 ```
