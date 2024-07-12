@@ -18,7 +18,7 @@ sudo apt-get install build-essential libssl-dev libffi-dev python3-dev python3-p
 
 ```
 sudo mkdir /app
-sudo chown user /app
+sudo chown ubuntu /app
 cd /app
 ```
 
