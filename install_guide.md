@@ -27,7 +27,7 @@ cd /app
 ```
 mkdir superset
 cd superset
-python3 -m venv superset_env
+sudo apt install python3.8-venv
 . superset_env/bin/activate
 pip install --upgrade setuptools pip
 ```
