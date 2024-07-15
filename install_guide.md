@@ -219,7 +219,7 @@ WantedBy=multi-user.target
 once copied run following command to enable and start service
 
 ```
-systemctl daemon-reload
+sudo systemctl daemon-reload
 sudo systemctl enable superset.service
 sudo systemctl start superset.service
 ```
