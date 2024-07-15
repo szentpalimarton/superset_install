@@ -118,7 +118,9 @@ openssl rand -base64 42
 ```
 # Create an admin user in your metadata database (use `admin` as username to be able to load the examples)
 export FLASK_APP=superset
-
+pip install marshmallow_enum
+sudo apt install -y libsqlite3-dev
+# itt recompile kell ezt az elsobe bekene rakni
 superset db upgrade
 
 superset fab create-admin
