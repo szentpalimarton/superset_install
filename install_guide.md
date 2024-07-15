@@ -47,6 +47,14 @@ wget https://www.python.org/ftp/python/3.10.14/Python-3.10.14.tgz
 tar -xf Python-3.10.14.tgz
 
 
+# Create and activate virtual environment
+python3.10 -m venv superset_env
+source superset_env/bin/activate
+
+# Upgrade pip and install Apache Superset
+pip install --upgrade pip setuptools wheel
+
+--nem
 . superset_env/bin/activate
 pip install --upgrade setuptools pip
 ```
@@ -54,7 +62,7 @@ pip install --upgrade setuptools pip
 * Install Required dependencies
 
 ```
-pip install pillow
+pip install pillow -- ez meg nem tudom mire kell
 pip install apache-superset
 ```
 
@@ -64,6 +72,7 @@ pip install apache-superset
 ```
 touch superset_config.py
 export SUPERSET_CONFIG_PATH=/app/superset/superset_config.py
+nano superset_config.py
 
 ```
 
