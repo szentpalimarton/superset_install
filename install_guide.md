@@ -166,6 +166,7 @@ chmod +x run_superset.sh
  * Lets run and test if it works?
 
 ```
+pip install gevent
 sh run_superset.sh
 ```
 
