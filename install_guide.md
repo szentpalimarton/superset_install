@@ -172,6 +172,22 @@ sh run_superset.sh
 
 * check if you are able to login using admin creds on server-ip-address:8088. If everything is working fine then we can go ahead and create service that will start automatically as soon as server starts or in case it reboots.
 
+AWS role is needed:
+```
+Configure Security Group:
+Ensure that the security group associated with your EC2 instance allows inbound traffic on port 8088.
+
+Go to the EC2 Management Console.
+In the left-hand menu, click on "Instances" and select your instance.
+Scroll down to the "Security groups" section and click on the security group link.
+In the "Inbound rules" tab, click "Edit inbound rules".
+Add a rule to allow traffic on port 8088:
+Type: Custom TCP
+Protocol: TCP
+Port range: 8088
+Source: 0.0.0.0/0 (for all IP addresses, or restrict to your IP range for better security)
+Save the rules.
+```
 Lets create service called superset using following command
 
 ```
